@@ -2,6 +2,7 @@ import time
 
 
 def countdown_timer():
+
     def divisor_f(seconds, divisor):
         quotient = seconds // divisor
         remainder = seconds % divisor
@@ -11,6 +12,7 @@ def countdown_timer():
         while True:
             try:
                 time_input = input("Insert time to count down (h:m:s) ")
+                # hs - hours, ms - minutes, ss - seconds
                 hs, ms, ss = map(int, time_input.split(':'))
                 total_s = hs * 3600 + ms * 60 + ss
                 if total_s < 0:
